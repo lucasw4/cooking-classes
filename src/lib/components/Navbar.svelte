@@ -1,7 +1,7 @@
 <header class="fixed z-20 h-fit border-b-1 border-neutral-200 bg-white">
 	<div class="flex w-screen items-center justify-between p-3 text-zinc-800">
 		<div class="text-md font-serif font-semibold sm:text-xl">
-			<span class="">Chef <span class="">Jules</span></span>
+			<a href="/"><span class="">Chef <span class="">Jules</span></span></a>
 		</div>
 		<div class="flex w-2/5 flex-col font-sans text-xs sm:w-1/3">
 			<ul class="flex justify-between">

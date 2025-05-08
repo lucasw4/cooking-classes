@@ -1,35 +1,9 @@
 <script>
 	import Navbar from '$lib/components/Navbar.svelte';
-
-	const featuredClasses = [
-		{
-			id: 1,
-			title: '🍝 Italian Cuisine',
-			description:
-				'Learn to make fresh pasta, classic sauces, and authentic Italian favorites from scratch.',
-			image:
-				'https://images.unsplash.com/photo-1616299915952-04c803388e5f?q=80&w=1362&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-			link: '#book'
-		},
-		{
-			id: 2,
-			title: '🍪 Baking Basics',
-			description:
-				'From cookies to cakes, build your baking foundation with easy-to-follow, delicious recipes.',
-			image:
-				'https://images.unsplash.com/photo-1462745294598-b3f9a2d7b858?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-			link: '#book'
-		},
-		{
-			id: 3,
-			title: '🍜 Thai Cooking',
-			description:
-				'Master the balance of sweet, sour, salty, and spicy with authentic Thai dishes like Pad Thai, curries, and fresh spring rolls.',
-			image:
-				'https://images.unsplash.com/photo-1675150277436-9c7348972c11?q=80&w=1164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-			link: '#book'
-		}
-	];
+	import StepCard from '$lib/components/StepCard.svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import FeaturedClasses from '$lib/components/FeaturedClasses.svelte';
 
 	const testimonials = [
 		{
@@ -69,9 +43,6 @@
 </script>
 
 <main class="bg-orange-50">
-	<!-- Navbar -->
-	<Navbar />
-
 	<!-- Hero section -->
 	<section class="relative h-2/3 w-screen py-12">
 		<div
@@ -89,7 +60,7 @@
 				</div>
 				<div class="flex w-[70%] justify-center">
 					<a
-						href="#"
+						href="/classes"
 						class="rounded-lg bg-teal-600 px-[30px] py-[8px] font-bold text-white hover:bg-teal-700"
 						>View Classes</a
 					>
@@ -144,35 +115,15 @@
 	</section>
 
 	<!-- Divider -->
-	<div class="my-12 flex justify-center">
+	<div class="flex justify-center bg-white py-12">
 		<div class="h-1 w-16 rounded-full bg-teal-600"></div>
 	</div>
 
 	<!-- Featured Classes Section -->
-	<section class="mx-auto max-w-6xl bg-white px-4 py-12">
-		<h2 class="mb-10 text-center font-serif text-3xl font-bold">Featured Classes</h2>
-
-		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			{#each featuredClasses as course}
-				<div class="overflow-hidden rounded-lg bg-orange-50 shadow-md">
-					<img src={course.image} alt={course.title} class="h-48 w-full object-cover" />
-					<div class="p-6">
-						<h3 class="mb-2 text-xl font-semibold">{course.title}</h3>
-						<p class="mb-4 text-gray-600">{course.description}</p>
-						<a
-							href={course.link}
-							class="inline-block rounded bg-teal-600 px-4 py-2 text-white hover:bg-teal-700"
-						>
-							Book Now
-						</a>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</section>
+	<FeaturedClasses />
 
 	<!-- Divider -->
-	<div class="flex justify-center bg-white pb-12">
+	<div class="flex justify-center pb-12">
 		<div class="h-1 w-16 rounded-full bg-teal-600"></div>
 	</div>
 
@@ -189,6 +140,54 @@
 			{/each}
 		</div>
 	</section>
+
+	<!-- Divider -->
+	<div class="flex justify-center bg-white py-12">
+		<div class="h-1 w-16 rounded-full bg-teal-600"></div>
+	</div>
+
+	<!-- How to boook section -->
+	<section class="mx-auto max-w-6xl px-4 py-12">
+		<h2 class="mb-4 text-center font-serif text-3xl font-bold">How to Book a Class</h2>
+		<div class="grid gap-8 sm:grid-cols-3">
+			<StepCard
+				step={1}
+				title="Browse Classes"
+				description="Explore a variety of classes for different skill levels and cuisines."
+			/>
+			<StepCard
+				step={2}
+				title="Book Your Spot"
+				description="Reserve your place in one of the cooking classes"
+			/>
+			<StepCard
+				step={3}
+				title="Cook and Learn"
+				description="Join Chef Jules in the kitchen and learn how to cook amazing meals."
+			/>
+		</div>
+	</section>
+
+	<!-- Reserve Spot Divider -->
+	<section>
+		<div
+			class="flex flex-col items-center justify-center space-y-4 border-16 border-teal-600 bg-white py-6"
+		>
+			<h4 class="font-serif text-2xl font-semibold text-zinc-900">Reserve Your Spot Now</h4>
+			<button
+				class="focus:ring-opacity-75 rounded-lg bg-teal-500 px-4 py-2 font-sans font-semibold text-white hover:bg-teal-600 focus:ring-teal-400 focus:outline-none"
+				>View Classes</button
+			>
+		</div>
+	</section>
+
+	<!-- Divider -->
+	<div class="flex justify-center bg-white pt-12 pb-6">
+		<div class="h-1 w-16 rounded-full bg-teal-600"></div>
+	</div>
+
+	<!-- Contact Section -->
+	<ContactForm />
 
 	<!-- CTA Section -->
 	<section class="relative h-1/3 w-full">
@@ -211,4 +210,6 @@
 			</div>
 		</div>
 	</section>
+
+	<Footer />
 </main>
