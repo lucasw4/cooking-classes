@@ -2,7 +2,7 @@
 	import { featuredClasses } from '$lib/data/classes.js';
 </script>
 
-<section class="mx-auto max-w-6xl px-4 py-12">
+<section id="classes" class="mx-auto max-w-6xl px-4 py-12">
 	<h1 class="mb-10 text-center font-serif text-3xl font-bold">Jule's Classes</h1>
 
 	<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

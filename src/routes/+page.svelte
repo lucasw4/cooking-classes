@@ -44,7 +44,7 @@
 
 <main class="bg-orange-50">
 	<!-- Hero section -->
-	<section class="relative h-2/3 w-screen py-12">
+	<section id="home" class="relative h-2/3 w-screen py-12">
 		<div
 			class="absolute inset-0 z-10 flex h-full w-full flex-col justify-center bg-zinc-900/50 from-white from-40% to-transparent to-60% text-white sm:px-6 md:bg-gradient-to-r md:text-neutral-800"
 		>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="flex w-[70%] justify-center">
 					<a
-						href="/classes"
+						href="#classes"
 						class="rounded-lg bg-teal-600 px-[30px] py-[8px] font-bold text-white hover:bg-teal-700"
 						>View Classes</a
 					>
@@ -83,7 +83,7 @@
 	</div>
 
 	<!-- About Section -->
-	<section class="mx-auto max-w-4xl px-4 py-12">
+	<section id="about" class="mx-auto max-w-4xl px-4 py-12">
 		<!-- Top Row: Image + Vertically Centered Heading -->
 		<div class="mb-6 flex items-center gap-4">
 			<img
@@ -106,7 +106,7 @@
 				to help you thrive.
 			</p>
 			<a
-				href="#about"
+				href="/about"
 				class="inline-block font-medium text-teal-600 transition hover:text-yellow-700 hover:underline"
 			>
 				Learn more about my journey →
@@ -128,7 +128,7 @@
 	</div>
 
 	<!-- Testimonials -->
-	<section class="mx-auto max-w-6xl px-4 py-12">
+	<section id="reviews" class="mx-auto max-w-6xl px-4 py-12">
 		<h2 class="mb-10 text-center font-serif text-3xl font-bold">What Students Are Saying</h2>
 
 		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -147,7 +147,7 @@
 	</div>
 
 	<!-- How to boook section -->
-	<section class="mx-auto max-w-6xl px-4 py-12">
+	<section id="howto" class="mx-auto max-w-6xl px-4 py-12">
 		<h2 class="mb-4 text-center font-serif text-3xl font-bold">How to Book a Class</h2>
 		<div class="grid gap-8 sm:grid-cols-3">
 			<StepCard
@@ -169,15 +169,17 @@
 	</section>
 
 	<!-- Reserve Spot Divider -->
-	<section>
+	<section id="reserve">
 		<div
 			class="flex flex-col items-center justify-center space-y-4 border-16 border-teal-600 bg-white py-6"
 		>
 			<h4 class="font-serif text-2xl font-semibold text-zinc-900">Reserve Your Spot Now</h4>
-			<button
-				class="focus:ring-opacity-75 rounded-lg bg-teal-500 px-4 py-2 font-sans font-semibold text-white hover:bg-teal-600 focus:ring-teal-400 focus:outline-none"
-				>View Classes</button
-			>
+			<a href="#classes" class="">
+				<button
+					class="focus:ring-opacity-75 rounded-lg bg-teal-500 px-4 py-2 font-sans font-semibold text-white hover:bg-teal-600 focus:ring-teal-400 focus:outline-none"
+					>View Classes</button
+				>
+			</a>
 		</div>
 	</section>
 
@@ -187,7 +189,9 @@
 	</div>
 
 	<!-- Contact Section -->
-	<ContactForm />
+	<section id="contact">
+		<ContactForm />
+	</section>
 
 	<!-- CTA Section -->
 	<section class="relative h-1/3 w-full">

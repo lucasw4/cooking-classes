@@ -34,7 +34,7 @@
 					<li class="flex items-center justify-between rounded-md border p-4">
 						<span>{session.date} @ {session.time}</span>
 						<a
-							href={`/book?class=${data.id}&date=${session.date}&time=${session.time}`}
+							href={'https://square.link/u/MtvBMRnK'}
 							class="rounded bg-yellow-500 px-4 py-1 text-sm text-white transition hover:bg-yellow-600"
 						>
 							Book

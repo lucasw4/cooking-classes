@@ -10,7 +10,7 @@
 	}
 </script>
 
-<section class="mx-auto max-w-2xl bg-white px-4 py-12">
+<div class="mx-auto max-w-2xl bg-white px-4 py-12">
 	<h2 class="mb-4 text-center font-serif text-3xl font-bold">Get in Touch with Chef Jules</h2>
 	<p class="mb-10 text-center text-gray-600">
 		Have questions about a class or just want to get in touch? Send me a message!
@@ -56,4 +56,4 @@
 			>
 		</div>
 	</form>
-</section>
+</div>
